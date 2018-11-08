@@ -1,0 +1,14 @@
+.messages {
+  width: 400px;
+  .message {
+    width: 400px;
+    .me {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .them {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}
