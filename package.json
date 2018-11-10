@@ -8,10 +8,12 @@
     "express": "^4.16.4",
     "ignore-styles": "^5.0.1",
     "node-sass": "^4.10.0",
+    "ramda": "^0.25.0",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-redux": "^5.1.0",
     "react-scripts": "2.1.1",
+    "redux": "^4.0.1",
     "reselect": "^4.0.0"
   },
   "scripts": {

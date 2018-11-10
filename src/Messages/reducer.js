@@ -30,7 +30,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         message: "",
-        messages: [...messages, message],
+        messages: [...action.messages, action.message],
         isSending: false
       };
 
