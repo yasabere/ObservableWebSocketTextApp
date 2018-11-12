@@ -5,4 +5,4 @@ const rootReducer = () => combineReducers({
   messages,
 })
 
-export default rootReducer
+export default messages

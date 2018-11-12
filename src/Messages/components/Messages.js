@@ -11,16 +11,12 @@ export default class Messages extends Component {
   }
 
   handleInputChange(e) {
-    this.props.sendMessage(e.target.value)
+    this.props.updateMessage(e.target.value)
   }
 
   handleKeyDown(e) {
-    const { message, messages } = this.state;
-
-    const newMessage = { message, time: new Date(), me: true }
-
     if (e.key === 'Enter') {
-      this.setState({ messages: [...messages, newMessage], message: '' })
+      this.props.sendMessage()
     }
   }
 

@@ -4,4 +4,4 @@ export const sendMessage = message => ({ type: SEND_MESSAGE, message });
 
 export const receiveMessage = message => ({ type: RECEIVE_MESSAGE, message });
 
-export const updateMessage = message => ({ type: UPDATE_MESSAGE, message })
+export const updateMessage = message => ({ type: UPDATE_MESSAGE, message });
