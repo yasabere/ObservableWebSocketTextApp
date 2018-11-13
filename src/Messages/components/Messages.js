@@ -16,7 +16,7 @@ export default class Messages extends Component {
 
   handleKeyDown(e) {
     if (e.key === 'Enter') {
-      this.props.sendMessage()
+      this.props.addMessage(this.props.message)
     }
   }
 

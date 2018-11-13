@@ -1,6 +1,6 @@
 import { pathOr } from 'ramda'
 import { connect } from 'react-redux'
-import { sendMessage, receiveMessage, updateMessage } from './actions'
+import { addMessage, updateMessage } from './actions'
 import Messages from './components/Messages'
 
 const getMessage = pathOr('', 'message')
@@ -13,8 +13,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-  sendMessage,
-  receiveMessage,
+  addMessage,
   updateMessage,
 }
 

@@ -1,6 +1,6 @@
-import { SEND_MESSAGE, RECEIVE_MESSAGE, UPDATE_MESSAGE } from "./consts";
+import { ADD_MESSAGE, RECEIVE_MESSAGE, UPDATE_MESSAGE } from "./consts";
 
-export const sendMessage = message => ({ type: SEND_MESSAGE, message });
+export const addMessage = message => ({ type: ADD_MESSAGE, message, websocket: true });
 
 export const receiveMessage = message => ({ type: RECEIVE_MESSAGE, message });
 

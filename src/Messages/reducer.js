@@ -1,9 +1,6 @@
 import { pathOr } from "ramda";
 import {
-  SEND_MESSAGE,
-  SEND_MESSAGE_FAILURE,
-  SEND_MESSAGE_SUCCESS,
-  RECEIVE_MESSAGE,
+  ADD_MESSAGE,
   UPDATE_MESSAGE,
 } from "./consts";
 
@@ -14,21 +11,9 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
+  console.log(action.type, action)
   switch (action.type) {
-    case 'SEND_MESSAGE':
-      return {
-        ...state,
-        isSending: true
-      };
-
-    case SEND_MESSAGE_FAILURE:
-      return {
-        ...state,
-        isSending: false
-      };
-
-    case SEND_MESSAGE:
-    case SEND_MESSAGE_SUCCESS:
+    case ADD_MESSAGE:
       return {
         ...state,
         message: "",
@@ -36,11 +21,7 @@ export default (state = initialState, action) => {
         isSending: false
       };
 
-    case RECEIVE_MESSAGE:
-      return {};
-
     case UPDATE_MESSAGE:
-      console.log(UPDATE_MESSAGE, action)
       return {
         ...state,
         message: action.message,

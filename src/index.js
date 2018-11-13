@@ -1,16 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import rootReducer from './reducer'
 
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import webSocketsMiddleware from './middlewares/webSockets/middleware'
+
+
 const store = createStore(
   rootReducer, /* preloadedState, */
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  applyMiddleware(webSocketsMiddleware),
+  //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
